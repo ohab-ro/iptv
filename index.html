@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#061321">
+<meta name="description" content="OHAB IPTV - PS4 friendly IPTV host">
+<title>OHAB IPTV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>OHAB</span> IPTV <em>PS4</em></div>
+  <div id="netStatus" class="netStatus"><i id="netDot"></i><span id="netText">فحص الاتصال...</span></div>
+  <div id="clock" class="clock">--:--:--</div>
+</header>
+
+<nav class="tabs" aria-label="التنقل">
+  <button class="tabBtn active" data-tab="home">الرئيسية</button>
+  <button class="tabBtn" data-tab="xtream">XTREAM</button>
+  <button class="tabBtn" data-tab="m3u">M3U / M3U8</button>
+  <button class="tabBtn" data-tab="favorites">★ المفضلة</button>
+</nav>
+
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">PS4 WEB IPTV PLAYER</div>
+      <h1>OHAB IPTV</h1>
+      <p>مشغل خفيف ومهيأ لمتصفح PS4 مع Xtream وM3U/M3U8 وتصنيفات وبحث ومفضلة.</p>
+      <div class="badges"><b>XTREAM</b><b>M3U</b><b>M3U8 / HLS</b><b>PS4 FRIENDLY</b></div>
+    </div>
+    <div class="heroOrb">OHAB<br><small>IPTV</small></div>
+  </div>
+  <div class="stats">
+    <div><strong id="count">0</strong><span>القنوات</span></div>
+    <div><strong id="catCount">0</strong><span>التصنيفات</span></div>
+    <div><strong id="favCount">0</strong><span>المفضلة</span></div>
+  </div>
+  <div class="infoBox">
+    <b>نصيحة PS4:</b> أفضل توافق يكون عادةً مع بث HLS/M3U8 أو H.264/AAC. بعض صيغ أو ترميزات البث لا يدعمها متصفح PS4 حتى لو كان الرابط يعمل على الكمبيوتر.
+  </div>
+</section>
+
+<section id="xtream" class="page">
+  <div class="panel">
+    <div class="panelHead"><h2>XTREAM CODES</h2><span class="pill">LIVE API</span></div>
+    <input id="xhost" autocomplete="off" placeholder="http://server:port أو https://server:port">
+    <input id="xuser" autocomplete="off" placeholder="اسم المستخدم">
+    <input id="xpass" type="password" autocomplete="off" placeholder="كلمة المرور">
+    <label class="check"><input id="rememberX" type="checkbox"> حفظ بيانات XTREAM على هذا المتصفح</label>
+    <button id="loadX" class="primary wide">تحميل القنوات</button>
+    <div id="msgX" class="message"></div>
+  </div>
+</section>
+
+<section id="m3u" class="page">
+  <div class="panel">
+    <div class="panelHead"><h2>M3U / M3U8</h2><span class="pill">PLAYLIST</span></div>
+    <input id="murl" autocomplete="off" placeholder="رابط playlist.m3u أو playlist.m3u8">
+    <button id="loadM" class="primary wide">تحميل من الرابط</button>
+    <div class="or">أو</div>
+    <label class="fileBtn">اختيار ملف M3U محلي<input id="mfile" type="file" accept=".m3u,.m3u8,text/plain"></label>
+    <div id="msgM" class="message"></div>
+  </div>
+</section>
+
+<section id="favorites" class="page">
+  <div class="sectionTitle"><h2>المفضلة</h2><button id="clearFav" class="ghost">مسح المفضلة</button></div>
+  <div id="favList" class="channelGrid"></div>
+</section>
+
+<section class="library">
+  <div class="sectionTitle"><h2>القنوات</h2><span id="librarySource" class="source">لا توجد قائمة محملة</span></div>
+  <div class="toolbar">
+    <input id="search" autocomplete="off" placeholder="🔎 بحث عن قناة...">
+    <select id="category"><option value="all">كل التصنيفات</option></select>
+    <select id="sort"><option value="name">الاسم: أ-ي</option><option value="group">التصنيف</option><option value="favorites">المفضلة أولاً</option></select>
+  </div>
+  <div id="channels" class="channelGrid"></div>
+</section>
+</main>
+
+<div id="playerModal" class="modal hidden">
+  <div id="playerFrame" class="playerBox">
+    <button id="close" class="close" aria-label="إغلاق">×</button>
+    <div class="now"><b id="nowName">-</b><span id="nowGroup">-</span></div>
+    <div class="videoFrame"><video id="video" controls playsinline preload="metadata"></video></div>
+    <div class="playerActions"><button id="retry" class="ghost">إعادة المحاولة</button><button id="fullscreenBtn" class="fullscreenBtn">⛶ ملء الشاشة</button><span id="playerMsg"></span></div>
+  </div>
+</div>
+
+<footer>OHAB IPTV • PS4 Web Edition</footer>
+<script src="app.js"></script>
+</body>
+</html>
