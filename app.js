@@ -168,7 +168,7 @@
     return '<div class="channel" data-id="' + esc(c.id) + '">' +
       '<button class="fav" onclick="event.stopPropagation();ohabToggleFav(\'' + esc(c.id).replace(/'/g, "\\'") + '\')">' + star + '</button>' +
       '<div class="logo">' + logo + '</div>' +
-      '<div class="chText"><b>' + esc(c.name) + '</b><small>' + esc(c.group) + '</small></div>' +
+      '<div class="chText"><b title="' + esc(c.name) + '">' + esc(c.name) + '</b><small title="' + esc(c.group) + '">' + esc(c.group) + '</small></div>' +
       '</div>';
   }
 

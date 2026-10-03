@@ -46,9 +46,9 @@
 <section id="xtream" class="page">
   <div class="panel">
     <div class="panelHead"><h2>XTREAM CODES</h2><span class="pill">LIVE API</span></div>
-    <input id="xhost" autocomplete="off" placeholder="http://server:port أو https://server:port">
-    <input id="xuser" autocomplete="off" placeholder="اسم المستخدم">
-    <input id="xpass" type="password" autocomplete="off" placeholder="كلمة المرور">
+    <label class="fieldLabel">رابط السيرفر</label><input id="xhost" autocomplete="off" spellcheck="false" placeholder="http://server:port أو https://server:port">
+    <label class="fieldLabel">اسم المستخدم</label><input id="xuser" autocomplete="off" spellcheck="false" placeholder="اسم المستخدم">
+    <label class="fieldLabel">كلمة المرور</label><input id="xpass" type="password" autocomplete="off" spellcheck="false" placeholder="كلمة المرور">
     <label class="check"><input id="rememberX" type="checkbox"> حفظ بيانات XTREAM على هذا المتصفح</label>
     <button id="loadX" class="primary wide">تحميل القنوات</button>
     <div id="msgX" class="message"></div>
@@ -58,7 +58,7 @@
 <section id="m3u" class="page">
   <div class="panel">
     <div class="panelHead"><h2>M3U / M3U8</h2><span class="pill">PLAYLIST</span></div>
-    <input id="murl" autocomplete="off" placeholder="رابط playlist.m3u أو playlist.m3u8">
+    <label class="fieldLabel">رابط M3U / M3U8</label><input id="murl" autocomplete="off" spellcheck="false" placeholder="https://example.com/playlist.m3u أو playlist.m3u8">
     <button id="loadM" class="primary wide">تحميل من الرابط</button>
     <div class="or">أو</div>
     <label class="fileBtn">اختيار ملف M3U محلي<input id="mfile" type="file" accept=".m3u,.m3u8,text/plain"></label>

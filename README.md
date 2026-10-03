@@ -26,3 +26,10 @@ GitHub Pages لا يعمل كـ proxy. إذا كان رابط M3U أو API ال�
 
 ## ملاحظة أمنية
 حفظ بيانات Xtream اختياري. إذا فعلته، تُحفظ محليًا في متصفح الجهاز عبر `localStorage`. لا تفعل ذلك على جهاز مشترك.
+
+
+### v4 visual improvements
+- Full channel names are wrapped instead of being cut off with ellipsis.
+- Channel cards are wider/taller on desktop for better readability.
+- Xtream and M3U URL fields are significantly larger with LTR text alignment for easier URL entry.
+- Added field labels and disabled spellcheck for URL/account fields.
